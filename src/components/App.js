@@ -6,6 +6,7 @@ import LandingPage from "./LandingPage";
 import Services from "./Services";
 import Footer from "./ui/Footer";
 import Header from "./ui/Header";
+import Contact from "./Contact";
 import theme from "./ui/Theme";
 
 function App() {
