@@ -2,11 +2,12 @@ import { ThemeProvider } from "@material-ui/styles";
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import About from "./About";
+import Contact from "./Contact";
+import Estimate from "./Estimate";
 import LandingPage from "./LandingPage";
 import Services from "./Services";
 import Footer from "./ui/Footer";
 import Header from "./ui/Header";
-import Contact from "./Contact";
 import theme from "./ui/Theme";
 
 function App() {
@@ -66,6 +67,16 @@ function App() {
               />
             )}
           />
+          <Route
+            exact
+            path="/estimate"
+            render={props => (
+              <Estimate
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )} />
         </Switch>
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </BrowserRouter>
