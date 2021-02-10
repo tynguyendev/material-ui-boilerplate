@@ -2,6 +2,8 @@ import { ThemeProvider } from "@material-ui/styles";
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import About from "./About";
+import Services from "./Services";
+import Footer from "./ui/Footer";
 import Header from "./ui/Header";
 import theme from "./ui/Theme";
 
@@ -20,6 +22,17 @@ function App() {
         <Switch>
           <Route
             exact
+            path="/services"
+            render={props => (
+              <Services
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            exact
             path="/about"
             render={props => (
               <About
@@ -30,6 +43,7 @@ function App() {
             )}
           />
         </Switch>
+        <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </BrowserRouter>
     </ThemeProvider>
   )

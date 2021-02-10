@@ -9,6 +9,7 @@ import profile from "../assets/founder.jpg";
 import history from "../assets/history.svg";
 import puppy from "../assets/puppy.svg";
 import yearbook from "../assets/yearbook.svg";
+import CallToAction from "./ui/CallToAction";
 
 const useStyles = makeStyles(theme => ({
   missionStatement: {
@@ -257,7 +258,7 @@ export default function About(props) {
         </Grid>
       </Grid>
       <Grid item>
-        {/* <CallToAction setValsue={props.setValue} /> */}
+        <CallToAction setValsue={props.setValue} />
       </Grid>
     </Grid>
   );
